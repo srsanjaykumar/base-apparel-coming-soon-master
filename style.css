@@ -67,15 +67,14 @@ p{
 
 .email{
     display: flex;
-    /* justify-content: space-between; */
-    border: 1px solid black;
+    border: 1px solid var(--desaturated-red);
     border-radius: 2rem;
     width: 100%;
     max-width: 30vw;
     height: auto;
 }
 input[type="email"] {
-    /* width: 70%; */
+    
     width: 100%;
     padding: 1rem 2rem;
     border: none;
@@ -94,6 +93,49 @@ button{
     font-weight: 700;
     font-size: 1.1rem;
     cursor: pointer;
-    border: 
+    
+}
+.error{
+    color: var(--soft-red);
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+    font-weight: 500;
 }
 
+/* .email{
+    display: flex;
+    border: 1px solid black;
+    border-radius: 2rem;
+    width: 100%;
+    max-width: 30vw;
+    height: auto;
+    position: relative;
+    justify-content: space-between;
+}
+input[type="email"] {
+    
+    width: 78%;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 2rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    outline: none;
+
+}
+
+button{
+    position: absolute;
+    right: -2px;
+    top: -2px;
+    background-color: rgb(229, 103, 80);
+    color: white;
+    border: 1px solid transparent;
+    padding: 14.9px 3rem;
+    border-radius: 2rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+
+    
+} */
