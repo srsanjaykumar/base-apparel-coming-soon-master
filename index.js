@@ -9,6 +9,11 @@ const p = document.createElement("p");
 p.classList.add("error");
 p.textContent = error_message;
 
+const img = document.createElement('img');
+img.src = "images/icon-error.svg";
+img.classList.add("error-icon");
+
+
 console.log(mail, send_btn);
 
 function validate_email(email) {
@@ -19,13 +24,17 @@ function validate_email(email) {
   }
 }
 send_btn.addEventListener("click", (e) => {
-  // e.preventDefault();
+  e.preventDefault();
   const email = mail.value;
   console.log(email);
   if (validate_email(email)) {
     p.remove();
+    img.remove();
     console.log("Good email");
+
   } else {
+    
+    mail.insertAdjacentElement("afterend", img);
     email_element.appendChild(p);
   }
 });
