@@ -160,10 +160,19 @@ button{
         display: flex;
         flex-direction: column;
         max-width: 100%;
-        padding: 2rem 5vw;
+        padding: 2rem 0vw;
         align-items: center;
         text-align: center;
     }
+    .hero-image{
+        margin-top: 2rem;
+        width: 100%;
+        
+    }
+    .main *:not(.hero-image , .email , ) {
+        padding: 0rem 5vw;
+    }
+    
 
     .image {
         max-width: 100%;

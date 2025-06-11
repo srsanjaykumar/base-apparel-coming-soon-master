@@ -44,5 +44,39 @@ send_btn.addEventListener("click", (e) => {
   }
 });
 
+// Responsive design for mobile and desktop\
+const logo = document.querySelector(".logo");
+const new_image = document.createElement("img");
+const image_div=  document.querySelector(".image");
 
+new_image.src = "images/hero-mobile.jpg";
+new_image.classList.add("hero-image");
+// 
+// window.addEventListener("resize", () => {
+//     if (window.matchMedia("(max-width: 620px)").matches) {
+//         logo.insertAdjacentElement("afterend", new_image);
+//         image_div.style.display = "none";
+//     } else {
+//       console.log("LARGE");
+        
+//     }
+// });
 
+function handleScreenChange(event) {
+    if (event.matches) {
+        console.log("Screen is small - applying mobile-specific behavior");
+        logo.insertAdjacentElement("afterend", new_image);
+        image_div.style.display = "none";
+    } else {
+        console.log("Screen is large - applying desktop-specific behavior");
+       image_div.style.display = "";
+       new_image.remove();
+    }
+}
+
+// Create a media query listener
+const mediaQuery = window.matchMedia("(max-width: 620px)");
+mediaQuery.addEventListener("change", handleScreenChange);
+
+// Run on page load to check the initial state
+handleScreenChange(mediaQuery);
